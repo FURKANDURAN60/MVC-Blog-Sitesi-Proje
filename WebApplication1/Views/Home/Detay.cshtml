@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Detay";
+}
+
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-md-8">
+            <!--MAKALE LİSTESİ-->
+            <div class="card-group">
+                <div class="card">
+                    <img src="/Content/images/@ViewBag.makale.Resim" class="card-img-top" alt="..." height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">@ViewBag.makale.Baslik</h5>
+                        <p class="card-text">@ViewBag.makale.Aciklama</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <!--KATEGORİ LİSTESİ-->
+            @Html.Action("KategoriListesi", "Kategori")
+            <br />
+            @Html.Action("EnCokOkunan", "Home")
+        </div>
+    </div>
+</div>
+

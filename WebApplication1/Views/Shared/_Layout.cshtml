@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            /* Arka plan resmi */
+            background-image: url('/Content/images/backg.jpg');
+            /* Arka plan resminin boyutunu ayarla */
+            background-size: cover;
+            /* Sayfayı tam ekran yap */
+            height: 100vh;
+            margin: 0;
+            
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+
+       
+        
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <title>Furkan Duran</title>
+</head>
+<body>
+
+    <header>
+        <!--MENU CUBUGU-->
+        <div class="container">
+            <br />
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/Home/Index">
+                        <img src="/Content/images/logo.png" width="60" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        @Html.Partial("Arama")
+                        @Html.Partial("LoginPartial");
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    @RenderBody()
+    
+    <footer>
+        <!--Footer Kısmı-->
+        <div class="container">
+            <br />
+            <div class="row" style="background-color:black">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-8">
+                    <h6 style="color:white; padding: 15px 0px 0px 0px">İLETİŞİM</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/Account/Login" style="color:white ; text-decoration: none;">Giriş</a>
+                        </li>
+                        <li>
+                            <a href="/Account/Register" style="color:white ; text-decoration: none;">Üye Ol</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 style="color:white; padding: 15px 0px 0px 0px">SOSYAL MEDYA</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://github.com/FURKANDURAN60">
+                                <img src="/Content/images/github-mark-white.png" width="35" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Alttaki Kısım js kodu için(Makale Ekleme Kısmındaki yere tarih getirmek için)-->
+    @RenderSection("script",required:false) 
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<WebApplication1.Models.Kategori>
+<div class="card" style="width: 18rem;">
+    <a href="/Home/Index" class="list-group-item list-group-item-action active" aria-current="true">
+        Kategoriler
+    </a>
+    @foreach (var item in Model)
+    {
+        <a href="/Home/MakaleListesi/@item.Id" class="list-group-item list-group-item-action">@item.KategoriAd</a>
+    }
+</div>
+
+
+<!--Burası Partial View Kısmı (Kategoriler için , soldaki tablo)-->
